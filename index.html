@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Ystävän nimi] - Vaalit 2025</title>
+    <style>
+        /* Perus tyylit */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #003f7f, #0056b3);
+            color: #fff;
+            text-align: center;
+            padding: 100px 15px;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        header .cta-btn {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #333;
+            padding: 15px 35px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        header .cta-btn:hover {
+            background-color: #e6b800;
+        }
+
+        .container {
+            max-width: 960px; /* Kapeampi leveys */
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #eaf2f7;
+            border-radius: 10px;
+        }
+        .hero img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 6px solid #fff;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #003f7f;
+        }
+        .hero p {
+            font-size: 1.3em;
+            margin-top: 15px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2.5em;
+            color: #003f7f;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin: 30px 0;
+            padding-left: 20px;
+            border-left: 6px solid #0077ff;
+            font-size: 1.3em;
+        }
+        .goals {
+            background-color: #f7f8fa;
+            padding: 40px 20px;
+            text-align: left;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .goals h3 {
+            color: #003f7f;
+            margin-bottom: 20px;
+            font-size: 2.3em;
+        }
+        .goals ul {
+            list-style-type: square;
+            padding-left: 30px;
+        }
+        .goals ul li {
+            margin: 18px 0;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .testimonial {
+            background-color: #f4f4f9;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .testimonial p {
+            font-size: 1.1em;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* Tietokoneversio (näkyy suuremmilla näytöillä) */
+        @media (min-width: 1024px) {
+            header h1 {
+                font-size: 3.5em; /* Isompi teksti */
+            }
+            .hero img {
+                width: 250px;
+                height: 250px;
+            }
+            .hero h2 {
+                font-size: 2.8em;
+            }
+            .hero p {
+                font-size: 1.5em;
+            }
+            .content h2 {
+                font-size: 2.8em;
+            }
+            .content p {
+                font-size: 1.4em;
+            }
+            .goals h3 {
+                font-size: 2.6em;
+            }
+            .goals ul li {
+                font-size: 1.3em;
+            }
+        }
+
+        /* Mobiiliversio (näkyy pienemmillä näytöillä) */
+        @media (max-width: 767px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            .hero img {
+                width: 150px;
+                height: 150px;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .content h2 {
+                font-size: 2em;
+            }
+            .content p {
+                font-size: 1.1em;
+            }
+            .goals h3 {
+                font-size: 2em;
+            }
+            .goals ul li {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>[Ystävän nimi]</h1>
+    <p>Luottamusta, oikeudenmukaisuutta ja tulevaisuuden uskoa</p>
+    <a href="#tavoitteeni" class="cta-btn">Tutustu tavoitteisiini</a>
+</header>
+
+<div class="container">
+    <div class="hero">
+        <img src="placeholder.jpg" alt="Ehdokkaan kuva">
+        <h2>Hei, olen [Ystävän nimi]</h2>
+        <p>"Yhdessä voimme muuttaa huomista paremmaksi."</p>
+    </div>
+    <div class="content">
+        <h2>Miksi valita minut?</h2>
+        <p>
+            Olen ehdokas, joka uskoo avoimeen ja reiluun yhteiskuntaan. Koulutus, ympäristö ja tasa-arvo ovat minulle sydämen asioita, ja teen kovasti töitä niiden eteen.
+        </p>
+        <p class="quote">
+            "Luottamus ei synny sanoista, vaan teoista – yhdessä voimme rakentaa paremman tulevaisuuden."
+        </p>
+    </div>
+    <div class="goals" id="tavoitteeni">
+        <h3>Tavoitteeni</h3>
+        <ul>
+            <li>Edistää kaikkien tasa-arvoisia mahdollisuuksia koulutuksessa.</li>
+            <li>Taata kestävä kehitys ja ympäristöystävällinen politiikka.</li>
+            <li>Vahvistaa yhteisöjä ja luoda avoin päätöksenteko.</li>
+            <li>Parantaa sosiaaliturvaa ja terveydenhuoltoa kaikille.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="testimonial">
+    <h2>Mitä muut sanovat minusta</h2>
+    <p>"[Ystävän nimi] on ollut aina läsnä ja valmis kuuntelemaan. Hänellä on selkeä visio ja kyky tuoda muutoksia." - Jani, Kouluttaja</p>
+</div>
+
+</body>
+</html>
