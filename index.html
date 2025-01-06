@@ -1,237 +1,218 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Ystävän nimi] - Vaalit 2025</title>
-    <style>
-        /* Perus tyylit */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
-            line-height: 1.7;
-        }
-        header {
-            background: linear-gradient(135deg, #003f7f, #0056b3);
-            color: #fff;
-            text-align: center;
-            padding: 100px 15px;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-            font-weight: bold;
-        }
-        header p {
-            font-size: 1.5em;
-            margin: 10px 0;
-            line-height: 1.5;
-        }
-        header .cta-btn {
-            display: inline-block;
-            background-color: #ffcc00;
-            color: #333;
-            padding: 15px 35px;
-            font-size: 1.3em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-        header .cta-btn:hover {
-            background-color: #e6b800;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farhad Noori - Tampereen Kuntavaalit 2025</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f6;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        .container {
-            max-width: 960px; /* Kapeampi leveys */
-            margin: 40px auto;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #eaf2f7;
-            border-radius: 10px;
-        }
-        .hero img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            border: 6px solid #fff;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-        }
-        .hero h2 {
-            font-size: 2.5em;
-            margin-top: 20px;
-            color: #003f7f;
-        }
-        .hero p {
-            font-size: 1.3em;
-            margin-top: 15px;
-            color: #555;
-            font-style: italic;
-        }
+    header {
+      background-color: #5CB85C;
+      color: white;
+      padding: 40px 15px;
+      text-align: center;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid #4CAF50;
+    }
 
-        .content {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .content h2 {
-            font-size: 2.5em;
-            color: #003f7f;
-            margin-bottom: 20px;
-        }
-        .content p {
-            font-size: 1.2em;
-            margin: 20px 0;
-            line-height: 1.6;
-        }
-        .quote {
-            font-style: italic;
-            color: #555;
-            margin: 30px 0;
-            padding-left: 20px;
-            border-left: 6px solid #0077ff;
-            font-size: 1.3em;
-        }
-        .goals {
-            background-color: #f7f8fa;
-            padding: 40px 20px;
-            text-align: left;
-            border-radius: 10px;
-            margin-bottom: 40px;
-        }
-        .goals h3 {
-            color: #003f7f;
-            margin-bottom: 20px;
-            font-size: 2.3em;
-        }
-        .goals ul {
-            list-style-type: square;
-            padding-left: 30px;
-        }
-        .goals ul li {
-            margin: 18px 0;
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-        .testimonial {
-            background-color: #f4f4f9;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 10px;
-        }
-        .testimonial p {
-            font-size: 1.1em;
-            margin-top: 20px;
-            font-style: italic;
-        }
+    header h1 {
+      font-size: 38px;
+      margin: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        /* Tietokoneversio (näkyy suuremmilla näytöillä) */
-        @media (min-width: 1024px) {
-            header h1 {
-                font-size: 3.5em; /* Isompi teksti */
-            }
-            .hero img {
-                width: 250px;
-                height: 250px;
-            }
-            .hero h2 {
-                font-size: 2.8em;
-            }
-            .hero p {
-                font-size: 1.5em;
-            }
-            .content h2 {
-                font-size: 2.8em;
-            }
-            .content p {
-                font-size: 1.4em;
-            }
-            .goals h3 {
-                font-size: 2.6em;
-            }
-            .goals ul li {
-                font-size: 1.3em;
-            }
-        }
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
 
-        /* Mobiiliversio (näkyy pienemmillä näytöillä) */
-        @media (max-width: 767px) {
-            header h1 {
-                font-size: 2.2em;
-            }
-            .hero img {
-                width: 150px;
-                height: 150px;
-            }
-            .hero h2 {
-                font-size: 2em;
-            }
-            .hero p {
-                font-size: 1.2em;
-            }
-            .content h2 {
-                font-size: 2em;
-            }
-            .content p {
-                font-size: 1.1em;
-            }
-            .goals h3 {
-                font-size: 2em;
-            }
-            .goals ul li {
-                font-size: 1.1em;
-            }
-        }
-    </style>
+    .language-selector {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .language-selector button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .language-selector button:hover {
+      background-color: #45a049;
+    }
+
+    section {
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 1100px;
+      background-color: white;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+      border-left: 5px solid #4CAF50;
+    }
+
+    footer {
+      background-color: #5CB85C;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 16px;
+      margin-top: 30px;
+      font-weight: 300;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsiivisuus */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+
+      .language-selector {
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+      }
+
+      section {
+        padding: 20px;
+        margin: 10px;
+      }
+
+      footer {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 26px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .language-selector button {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+
+      section {
+        padding: 15px;
+        margin: 10px;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>[Ystävän nimi]</h1>
-    <p>Luottamusta, oikeudenmukaisuutta ja tulevaisuuden uskoa</p>
-    <a href="#tavoitteeni" class="cta-btn">Tutustu tavoitteisiini</a>
+  <h1 id="header-title">Tervetuloa Farhad Noorin kampanjasivulle</h1>
+  <p id="header-description">Kohti parempaa Tampereen tulevaisuutta – yhdessä voimme tehdä sen!</p>
+
+  <!-- Kielivalintanappien lisääminen -->
+  <div class="language-selector">
+    <button onclick="changeLanguage('fi')">Suomi</button>
+    <button onclick="changeLanguage('en')">English</button>
+  </div>
 </header>
 
-<div class="container">
-    <div class="hero">
-        <img src="placeholder.jpg" alt="Ehdokkaan kuva">
-        <h2>Hei, olen [Ystävän nimi]</h2>
-        <p>"Yhdessä voimme muuttaa huomista paremmaksi."</p>
-    </div>
-    <div class="content">
-        <h2>Miksi valita minut?</h2>
-        <p>
-            Olen ehdokas, joka uskoo avoimeen ja reiluun yhteiskuntaan. Koulutus, ympäristö ja tasa-arvo ovat minulle sydämen asioita, ja teen kovasti töitä niiden eteen.
-        </p>
-        <p class="quote">
-            "Luottamus ei synny sanoista, vaan teoista – yhdessä voimme rakentaa paremman tulevaisuuden."
-        </p>
-    </div>
-    <div class="goals" id="tavoitteeni">
-        <h3>Tavoitteeni</h3>
-        <ul>
-            <li>Edistää kaikkien tasa-arvoisia mahdollisuuksia koulutuksessa.</li>
-            <li>Taata kestävä kehitys ja ympäristöystävällinen politiikka.</li>
-            <li>Vahvistaa yhteisöjä ja luoda avoin päätöksenteko.</li>
-            <li>Parantaa sosiaaliturvaa ja terveydenhuoltoa kaikille.</li>
-        </ul>
-    </div>
-</div>
+<section>
+  <h2 id="section-1-title">Farhad Noori – Muutoksen Puolesta</h2>
+  <p id="section-1-content">
+    Farhad Noori on ehdokas, joka tuo tuoretta ajattelua Tampereen politiikkaan. Hän on päättänyt sitoutua nuorten ja yhteisöjen tukemiseen, edistämään tasa-arvoa ja luomaan mahdollisuuksia kaikille. Farhad uskoo, että Tampere voi olla paikka, jossa jokaisella on mahdollisuus menestyä.
+  </p>
+</section>
 
-<div class="testimonial">
-    <h2>Mitä muut sanovat minusta</h2>
-    <p>"[Ystävän nimi] on ollut aina läsnä ja valmis kuuntelemaan. Hänellä on selkeä visio ja kyky tuoda muutoksia." - Jani, Kouluttaja</p>
-</div>
+<section>
+  <h2 id="section-2-title">Farhadin Prioriteetit: Nuoret ja Yhteisö</h2>
+  <p id="section-2-content">
+    Farhadin tärkeimmät tavoitteet ovat nuorten tukeminen ja yhteisön kehittäminen. Hän uskoo, että nuorilla on avainasemassa tulevaisuuden rakentamisessa. Hän haluaa taata nuorille paremmat mahdollisuudet koulutuksessa ja työelämässä sekä tukea heidän yrittäjyysunelmiaan.
+  </p>
+</section>
+
+<section>
+  <h2 id="section-3-title">Yhteisön Tuki – Vahvistetaan Tampereen Tulevaisuutta</h2>
+  <p id="section-3-content">
+    Farhadin mielestä Tampereen tulevaisuus rakentuu yhteisön tuelle ja osallistumiselle. Hän on sitoutunut tekemään kaupungista paikan, jossa ihmiset voivat elää, työskennellä ja kasvaa yhdessä. Yhteisö, joka tukee toisiaan, on avain kestävään kehitykseen.
+  </p>
+</section>
+
+<footer>
+  <p>Farhad Noori | Tampereen Kuntavaalit 2025</p>
+</footer>
+
+<script>
+  function changeLanguage(language) {
+    const translations = {
+      fi: {
+        'header-title': 'Tervetuloa Farhad Noorin kampanjasivulle',
+        'header-description': 'Kohti parempaa Tampereen tulevaisuutta – yhdessä voimme tehdä sen!',
+        'section-1-title': 'Farhad Noori – Muutoksen Puolesta',
+        'section-1-content': 'Farhad Noori on ehdokas, joka tuo tuoretta ajattelua Tampereen politiikkaan. Hän on päättänyt sitoutua nuorten ja yhteisöjen tukemiseen, edistämään tasa-arvoa ja luomaan mahdollisuuksia kaikille. Farhad uskoo, että Tampere voi olla paikka, jossa jokaisella on mahdollisuus menestyä.',
+        'section-2-title': 'Farhadin Prioriteetit: Nuoret ja Yhteisö',
+        'section-2-content': 'Farhadin tärkeimmät tavoitteet ovat nuorten tukeminen ja yhteisön kehittäminen. Hän uskoo, että nuorilla on avainasemassa tulevaisuuden rakentamisessa. Hän haluaa taata nuorille paremmat mahdollisuudet koulutuksessa ja työelämässä sekä tukea heidän yrittäjyysunelmiaan.',
+        'section-3-title': 'Yhteisön Tuki – Vahvistetaan Tampereen Tulevaisuutta',
+        'section-3-content': 'Farhadin mielestä Tampereen tulevaisuus rakentuu yhteisön tuelle ja osallistumiselle. Hän on sitoutunut tekemään kaupungista paikan, jossa ihmiset voivat elää, työskennellä ja kasvaa yhdessä. Yhteisö, joka tukee toisiaan, on avain kestävään kehitykseen.'
+      },
+      en: {
+        'header-title': 'Welcome to Farhad Noori\'s Campaign Page',
+        'header-description': 'Towards a better future for Tampere – together, we can make it happen!',
+        'section-1-title': 'Farhad Noori – For Change',
+        'section-1-content': 'Farhad Noori is a candidate bringing fresh ideas to Tampere politics. He is committed to supporting youth and communities, promoting equality, and creating opportunities for everyone.',
+        'section-2-title': 'Farhad\'s Priorities: Youth and Community',
+        'section-2-content': 'Farhad\'s main goals are to support youth and develop the community. He believes that young people are key in building the future. He wants to ensure better opportunities for young people in education, work, and support their entrepreneurial dreams.',
+        'section-3-title': 'Community Support – Strengthening Tampere\'s Future',
+        'section-3-content': 'Farhad believes that Tampere\'s future is built on community support and participation. He is committed to making the city a place where people can live, work, and grow together. A community that supports one another is the key to sustainable development.'
+      }
+    };
+
+    document.getElementById('header-title').innerText = translations[language]['header-title'];
+    document.getElementById('header-description').innerText = translations[language]['header-description'];
+    document.getElementById('section-1-title').innerText = translations[language]['section-1-title'];
+    document.getElementById('section-1-content').innerText = translations[language]['section-1-content'];
+    document.getElementById('section-2-title').innerText = translations[language]['section-2-title'];
+    document.getElementById('section-2-content').innerText = translations[language]['section-2-content'];
+    document.getElementById('section-3-title').innerText = translations[language]['section-3-title'];
+    document.getElementById('section-3-content').innerText = translations[language]['section-3-content'];
+  }
+</script>
 
 </body>
 </html>
